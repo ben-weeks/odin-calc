@@ -1,0 +1,104 @@
+body {
+    font-family: 'Hack Regular', monospace;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    padding: 2%;
+    gap: 1em;
+}
+
+.header-text, .header-subtext {
+    padding: 0;
+    margin: 0;
+}
+
+.header-text {
+    font-size: 48px;
+}
+
+.header-subtext {
+    font-size: 20px;
+}
+
+/* Calculator */
+.calc {
+    font-size: 48px;
+    background-color: #eee;
+
+    padding: 12px;
+
+    border: 8px solid #aaa;
+    border-radius: 20px;
+}
+
+.display {
+    width: auto;
+    height: 1.25em;
+    background-color: #ccc;
+    color: #222;
+    border-radius: 8px;
+
+    text-align: right;
+    padding: 4px 8px;
+
+    margin-bottom: 8px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    row-gap: 8px;
+    column-gap: 8px;
+
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    all: unset;
+
+    background: #ccc;
+    color: #555;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    padding: 0.125em 0.5em;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.operator {
+    background: #aaa;
+    color: #555;
+}
+
+.equals {
+    grid-column: 3 / 5;
+}
+
+button:hover {
+    background: #555;
+    color: #ccc;
+}
+
+.test {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
