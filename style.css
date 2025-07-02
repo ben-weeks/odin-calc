@@ -3,8 +3,12 @@ body {
 
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
+    background-image: radial-gradient(circle, #fff, #ddd, #bbb);
+
+    height: 100vh;
 }
 
 .header {
@@ -25,11 +29,15 @@ body {
 }
 
 .header-text {
+    color: #444;
     font-size: 48px;
 }
 
-.header-subtext {
-    font-size: 20px;
+.footer {
+    color: #444;
+    font-size: 16px;
+
+
 }
 
 /* Calculator */
