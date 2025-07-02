@@ -6,6 +6,8 @@ const delButton = document.querySelector(".del")
 const display = document.querySelector(".display")
 const plusMinusButton = document.querySelector(".plus-minus")
 
+const mainBody = document.querySelector("body")
+
 let currentOperand = ""
 let prevOperand = ""
 let operator = undefined
@@ -93,3 +95,19 @@ clearButton.addEventListener("click", clear)
 equalsButton.addEventListener("click", calculate)
 delButton.addEventListener("click", del)
 plusMinusButton.addEventListener("click", plusMinus)
+
+// keyboard support
+const numberKeys = "0123456789."
+const operatorKeys = "+-*/"
+const delKey = "Backspace"
+const equalsKey = "Enter"
+const clearKey = "Cc"
+
+mainBody.addEventListener("keydown", (event) => {
+    const key = event.key
+    if (numberKeys.includes(key)) appendNumber(key) 
+    if (operatorKeys.includes(key)) appendOperator(key) 
+    if (key === delKey) del() 
+    if (key === equalsKey) calculate()
+    if (clearKey.includes(key)) clear() 
+})
